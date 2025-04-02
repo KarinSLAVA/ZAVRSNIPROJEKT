@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="main-title">GYM studio <span class="highlight">25</span>!</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">O nama</a></li>
+                <li><a href="#services">Usluge</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    
+    <section id="about">
+        <h2>O nama</h2>
+        <p>Dobrodošli u vaš drugi dom zdravlja, snage i motivacije. Naša teretana nije samo prostor za vježbanje—ona je zajednica. Ovdje stvaramo priče o uspjehu, savladavanju prepreka i ostvarivanju snova. Naš cilj je da svaki član osjeti podršku, energiju i motivaciju za svakodnevno postizanje svojih ciljeva. 
+        <strong>Jer, vaš uspjeh je naša inspiracija!</strong></p>
+        <p>
+            Uz najsuvremeniju opremu, nudimo programe prilagođene svim razinama fitnessa. Od početnika do profesionalaca, imamo ono što vam treba za transformaciju, bilo fizičku ili mentalnu. <strong>Pridružite se nama—jer zajedno smo jači!</strong>
+        </p>
+        <button class="back-to-top" onclick="scrollToTop()">Vrati se na početak</button>
+    </section>
+    
+
+    
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <form>
+            <label for="name">Ime:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Pošalji</button>
+            <button class="back-to-top" onclick="scrollToTop()">Vrati se na početak</button>
+        </form>
+    </section>
+
+
+
+
+    <section id="shop">
+        <h2>Shop</h2>
+        <div class="product">
+            <img src="protein.jpg" alt="Proteini" class="product-image">
+            <h3>Protein</h3>
+            <p>Cijena: €20</p>
+            <button onclick="addToCart('Proteini', 20)">Dodaj u košaricu</button>
+        </div>
+        <div class="product">
+            <img src="equipment.jpg" alt="Fitness oprema" class="product-image">
+            <h3>Proteini</h3>
+            <p>Cijena: €50</p>
+            <button onclick="addToCart('Fitness oprema', 50)">Dodaj u košaricu</button>
+        </div>
+        <div id="cart">
+            <h3>Vaša košarica:</h3>
+            <ul id="cart-items"></ul>
+            <p>Ukupno: €<span id="total-price">0</span></p>
+            <button class="back-to-top" onclick="scrollToTop()">Vrati se na početak</button>
+        </div>
+    
+    </section>
+    
+
+    <section id="services">
+        <h2>Usluge</h2>
+        <p>Kliknite na opciju kako biste saznali više:</p>
+        <button onclick="showServiceDetails('groupTraining')">Grupni treninzi</button>
+        <button onclick="showServiceDetails('personalTraining')">Osobni treninzi</button>
+        <button onclick="showServiceDetails('powerlifting')">Opremanje za powerlifting</button>
+    
+        <div id="service-details" style="display:none;">
+            <h3>Detalji usluge:</h3>
+            <div id="service-content"></div>
+            <button class="back-to-top" onclick="scrollToTop()">Vrati se na početak</button>
+        </div>
+    </section>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
