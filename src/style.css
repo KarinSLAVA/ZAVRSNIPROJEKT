@@ -46,15 +46,20 @@ form {
 #shop {
     margin-top: 2em;
     padding: 1em;
-    background-color: #e0e0e0;
+    background-color:  rgba(255, 255, 255, 0.1);
     text-align: center;
+
+}
+.elementi{
+    display:grid;
+    grid-template-columns: repeat(3,auto);
 }
 
 .product {
     border: 1px solid #333;
     padding: 1em;
     margin: 1em auto;
-    max-width: 300px;
+    min-width: 350px;
 }
 
 button {
@@ -85,19 +90,23 @@ body {
 
 .product-image {
     width: 100%;
-    max-width: 200px;
+    max-width: 400px;
     height: auto;
     display: block;
     margin: 0 auto 10px;
+}
+#shop h2{
+    color: white;
+    font-size:50px;
 }
 
 #shop {
     margin-top: 2em;
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -145,11 +154,11 @@ section {
 #shop {
     margin-top: 2em;
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color:  rgba(255, 255, 255, 0.1);
     color: #333; /* Tamna boja za tekst u shop sekciji */
     border-radius: 10px;
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -251,7 +260,7 @@ button:hover {
 #shop {
     margin-top: 2em;
     padding: 1.5em;
-    background-color: rgba(200, 200, 200, 0.8); /* Svijetlo siva s prozirnošću */
+    background-color:  rgba(255, 255, 255, 0.1); /* Svijetlo siva s prozirnošću */
     color: #333; /* Tamnija boja za tekst */
     border-radius: 10px;
     text-align: center;
@@ -266,7 +275,7 @@ button:hover {
     padding: 1em;
     margin: 1em auto;
     max-width: 300px;
-    background-color: rgba(255, 255, 255, 0.9); /* Blijedo bijela pozadina za proizvode */
+    background-color: rgba(255, 255, 255, 0.5); /* Blijedo bijela pozadina za proizvode */
     border-radius: 8px; /* Zaobljeni rubovi */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sjena za 3D efekt */
 }
