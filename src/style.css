@@ -223,9 +223,6 @@ button:hover {
     color: #ff4500; /* Jarko narančasta boja za isticanje riječi "GYM" */
     font-weight: bold; /* Podebljan font */
 }
-
-
-
 #services button {
     margin: 10px;
     padding: 0.8em 1.5em;
@@ -322,4 +319,45 @@ button:hover {
     box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.3); /* Naglašenija sjena na hover */
 }
 
+header {
+    background-color: #333;
+    padding: 1em 0;
+    text-align: center;
+}
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffd700; /* Zlatna boja za isticanje */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff4500; /* Jarko narančasta boja na hover */
+}
+
+#gym-membership {
+    margin-top: 2em;
+    padding: 1.5em;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
