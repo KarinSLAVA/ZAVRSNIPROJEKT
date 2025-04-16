@@ -1,7 +1,21 @@
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Hvala na vašem kontaktu! Uskoro ćemo vam se javiti.');
+// Scroll na vrh
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Alert za prijavu članstva
+document.getElementById("membership-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Hvala što ste se prijavili! Uskoro ćemo vas kontaktirati.");
 });
+
+// Alert za kontakt formu
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Poruka poslana! Hvala na javljanju.");
+});
+
+// Dodavanje u košaricu
 let cart = [];
 let totalPrice = 0;
 
@@ -11,87 +25,35 @@ function addToCart(product, price) {
 
     const cartItems = document.getElementById('cart-items');
     const listItem = document.createElement('li');
-    listItem.textContent = product + " - €" + price;
+    listItem.textContent = `${product} - €${price}`;
     cartItems.appendChild(listItem);
 
     document.getElementById('total-price').textContent = totalPrice.toFixed(2);
-    alert(product + " je dodan u košaricu!");
+    alert(`${product} je dodan u košaricu!`);
 }
-function showDetails(option) {
-    const detailsContent = document.getElementById('details-content');
-    const detailsSection = document.getElementById('details');
-    
-    if (option === 'group') {
-        detailsContent.textContent = 'Grupni trening uključuje vježbe prilagođene svima, uz motivaciju stručnih trenera i energiju grupe.';
-    } else if (option === 'personal') {
-        detailsContent.textContent = 'Osobni trening je prilagođen vašim specifičnim ciljevima i potrebama, uz stalnu podršku trenera.';
-    } else if (option === 'weeklyPlan') {
-        detailsContent.innerHTML = `
-            <strong>Plan treninga za radni tjedan:</strong>
-            <ul>
-                <li>Ponedjeljak: Kardio i noge</li>
-                <li>Utorak: Leđa i biceps</li>
-                <li>Srijeda: Odmor</li>
-                <li>Četvrtak: Prsa i triceps</li>
-                <li>Petak: Ramena i core</li>
-                <li>Subota: Full body trening</li>
-                <li>Nedjelja: Aktivno opuštanje</li>
-            </ul>
-        `;
-    } else if (option === 'nutrition') {
-        detailsContent.innerHTML = `
-            <strong>Preporučeni popis hrane:</strong>
-            <ul>
-                <li>Piletina, riba, jaja</li>
-                <li>Riža, krumpir, zobene pahuljice</li>
-                <li>Svježe povrće i voće</li>
-                <li>Proteinski dodaci</li>
-                <li>Oraščasti plodovi i maslinovo ulje</li>
-            </ul>
-        `;
-    }
-    
-    detailsSection.style.display = 'block';
-}
+
+// Detalji usluga + VIDEO dodan za "Grupni treninzi"
 function showServiceDetails(service) {
-    const serviceContent = document.getElementById('service-content');
-    const serviceDetails = document.getElementById('service-details');
+    const content = document.getElementById('service-content');
+    const video = document.getElementById('video-container');
+    document.getElementById('service-details').style.display = 'block';
 
     if (service === 'groupTraining') {
-        serviceContent.innerHTML = `
-            <strong>Grupni treninzi:</strong>
-            <ul>
-                <li>Dinamični treninzi za sve razine fitnessa.</li>
-                <li>Tim treneri za podršku i motivaciju.</li>
-                <li>Rad na izdržljivosti, snazi i fleksibilnosti.</li>
-            </ul>
-            <p><strong>Plan prehrane:</strong> Povećajte unos proteina i kompleksnih ugljikohidrata.</p>
+        content.innerHTML = `
+            <p><strong>Grupni treninzi</strong> su idealni za sve koji vole vježbati u društvu. Treninzi uključuju kardio, HIIT i kružne vježbe uz vodstvo instruktora.</p>
+        `;
+        video.innerHTML = `
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/3gliq0FnO94?si=sx8y6ZwilwhRE4Pn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         `;
     } else if (service === 'personalTraining') {
-        serviceContent.innerHTML = `
-            <strong>Osobni treninzi:</strong>
-            <ul>
-                <li>Individualizirani pristup temeljen na vašim ciljevima.</li>
-                <li>Detaljna analiza tehnike izvođenja vježbi.</li>
-            </ul>
-            <p><strong>Plan prehrane:</strong> Balansirana prehrana s naglaskom na makronutrijente.</p>
+        content.innerHTML = `
+            <p><strong>Osobni treninzi</strong> pružaju individualizirani pristup vašem fitness cilju uz stručnu pomoć naših trenera.</p>
         `;
+        video.innerHTML = ''; // Nema videa
     } else if (service === 'powerlifting') {
-        serviceContent.innerHTML = `
-            <strong>Opremanje za powerlifting:</strong>
-            <ul>
-                <li>Programi za povećanje snage u čučnju, bench pressu i deadliftu.</li>
-                <li>Specijalizirana oprema za trening i natjecanja.</li>
-            </ul>
-            <p><strong>Plan prehrane:</strong> Fokus na visokoproteinske obroke i kalorijski suficit.</p>
+        content.innerHTML = `
+            <p><strong>Opremanje za powerlifting</strong> nudi svu potrebnu opremu i programe za napredne vježbače usmjerene na snagu.</p>
         `;
+        video.innerHTML = ''; // Nema videa
     }
-
-    serviceDetails.style.display = 'block';
-}
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Glatki efekt pomicanja
-    });
 }
