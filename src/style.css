@@ -130,32 +130,30 @@ body {
     padding: 0;
     background: url('img/pozadina.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #ffffff; /* Tekst sada bijele boje za bolju vidljivost */
-}
+    color: #ffffff; }
 
 header {
     background-color: #333;
-    color: #f1f1f1; /* Svijetlosiva boja teksta za kontrast */
+    color: #f1f1f1; 
     padding: 1em 0;
     text-align: center;
 }
 
 nav ul li a {
-    color: #ffd700; /* Zlatna boja linkova za isticanje */
+    color: #ffd700; 
     text-decoration: none;
 }
 
 section {
     padding: 2em;
     text-align: center;
-    color: #ffffff; /* Bijela boja za tekst sekcija */
-}
+    color: #ffffff; }
 
 #shop {
     margin-top: 2em;
     padding: 1em;
     background-color:  rgba(255, 255, 255, 0.1);
-    color: #333; /* Tamna boja za tekst u shop sekciji */
+    color: #333; 
     border-radius: 10px;
     text-align: center;
     width: 100%;
@@ -167,7 +165,7 @@ button {
     margin-top: 1em;
     padding: 0.5em 1em;
     background-color: #333;
-    color: #ffd700; /* Zlatna boja teksta na gumbu */
+    color: #ffd700; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -175,17 +173,20 @@ button {
 
 button:hover {
     background-color: #555;
-    color: #ffffff; /* Bijela boja kada se miš prelazi preko gumba */
+    color: #ffffff;
 }
 #about {
-    background-color: rgba(0, 0, 0, 0.6); /* Poluprozirna crna pozadina */
-    color: #ffffff; /* Bijela boja za tekst */
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #ffffff; 
     padding: 2em;
-    border-radius: 10px; /* Zaobljeni rubovi */
-    margin: 2em auto;
-    width: 80%; /* Širina sekcije */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dodaje efekt sjene */
-    border: 2px solid #ffd700; /* Zlatni okvir za dodatno isticanje */
+    border-radius: 10px; /
+    .box {
+        margin: 2em auto;
+    }
+    
+    width: 80%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #ffd700; 
     text-align: center;
 }
 #services button {
@@ -212,70 +213,66 @@ button:hover {
 }
 
 #main-title {
-    font-size: 3em; /* Povećava veličinu glavnog naslova */
-    text-transform: uppercase; /* Pretvara tekst u velika slova */
-    color: #ffd700; /* Zlatna boja za eleganciju */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Efekt sjene za isticanje */
+    font-size: 3em; 
+    text-transform: uppercase; 
+    color: #ffd700; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
     margin-bottom: 0.5em;
 }
 
 .highlight {
-    color: #ff4500; /* Jarko narančasta boja za isticanje riječi "GYM" */
-    font-weight: bold; /* Podebljan font */
+    color: #ff4500; 
+    font-weight: bold; 
 }
 #services button {
     margin: 10px;
     padding: 0.8em 1.5em;
-    font-size: 1.2em; /* Povećava veličinu fonta za bolju čitljivost */
-    font-weight: bold; /* Podebljava tekst */
-    background-color: #ffd700; /* Zlatna boja gumba za privlačnost */
-    color: #333; /* Tamnija boja teksta za kontrast */
+    font-size: 1.2em; 
+    font-weight: bold; 
+    background-color: #ffd700; 
+    color: #333; 
     border: none;
-    border-radius: 8px; /* Zaobljeni rubovi za moderan izgled */
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); /* Efekt sjene */
+    border-radius: 8px; 
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
     cursor: pointer;
-    transition: all 0.3s ease; /* Animacija za hover efekt */
-}
+    transition: all 0.3s ease; }
 
 #services button:hover {
-    background-color: #ff4500; /* Jarko narančasta boja kada miš prelazi preko gumba */
-    color: #fff; /* Bijela boja teksta za kontrast */
-    transform: scale(1.05); /* Lagano povećanje gumba */
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.4); /* Naglašenija sjena na hover */
-}
+    background-color: #ff4500; 
+    color: #fff; 
+    transform: scale(1.05); 
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.4);}
 
 #service-details {
     margin-top: 1em;
     padding: 1.5em;
-    background-color: rgba(255, 255, 255, 0.9); /* Svijetla pozadina za kontrast */
-    color: #333; /* Tamna boja za tekst */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Dodaje elegantnu sjenu */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
-    font-size: 1.1em; /* Povećava veličinu fonta za čitljivost */
+    font-size: 1.1em; 
 }
 #shop {
     margin-top: 2em;
     padding: 1.5em;
-    background-color:  rgba(255, 255, 255, 0.1); /* Svijetlo siva s prozirnošću */
-    color: #333; /* Tamnija boja za tekst */
+    background-color:  rgba(255, 255, 255, 0.1); 
+    color: #333; 
     border-radius: 10px;
     text-align: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Blaga sjena */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .product {
-    border: 1px solid #555; /* Tamnija siva za obrub proizvoda */
+    border: 1px solid #555; 
     padding: 1em;
     margin: 1em auto;
     max-width: 300px;
-    background-color: rgba(255, 255, 255, 0.5); /* Blijedo bijela pozadina za proizvode */
-    border-radius: 8px; /* Zaobljeni rubovi */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sjena za 3D efekt */
-}
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
 
 .product-image {
     width: 100%;
@@ -289,7 +286,7 @@ button {
     margin-top: 1em;
     padding: 0.5em 1em;
     background-color: #333;
-    color: #ffd700; /* Zlatna boja teksta na gumbu */
+    color: #ffd700; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -297,26 +294,27 @@ button {
 
 button:hover {
     background-color: #555;
-    color: #fff; /* Bijela boja teksta na hover */
+    color: #fff; 
 }
 .back-to-top {
     margin-top: 20px;
     padding: 0.6em 1.2em;
-    background-color: #ff4500; /* Jarko narančasta boja za privlačnost */
-    color: #fff; /* Bijela boja teksta za kontrast */
+    background-color: #ff4500; 
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Blaga sjena za efekt dubine */
-    transition: all 0.3s ease; /* Animacija za hover efekt */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);*/
+    selector {
+        transition: all 0.3s ease;
 }
-
+}
 .back-to-top:hover {
-    background-color: #ffd700; /* Zlatna boja na hover */
-    color: #333; /* Tamnija boja teksta na hover */
-    transform: scale(1.1); /* Povećanje gumba na hover */
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.3); /* Naglašenija sjena na hover */
+    background-color: #ffd700; 
+    color: #333; 
+    transform: scale(1.1); 
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.3); 
 }
 
 header {
@@ -339,14 +337,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffd700; /* Zlatna boja za isticanje */
+    color: #ffd700; 
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #ff4500; /* Jarko narančasta boja na hover */
+    color: #ff4500; 
 }
 
 #gym-membership {
@@ -361,3 +359,9 @@ nav ul li a:hover {
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+#cart h3 {
+    color: white;
+    font-size:25px;}
+
+    
