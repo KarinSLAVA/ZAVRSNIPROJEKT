@@ -348,20 +348,82 @@ nav ul li a:hover {
 }
 
 #gym-membership {
-    margin-top: 2em;
+    margin-top: 5em;
     padding: 1.5em;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #333;
-    border-radius: 10px;
+    background-color: rgba(39, 36, 36, 0.3);
+    color: white;
+    border-radius: 12px;
     text-align: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5em;
 }
 
-#cart h3 {
-    color: white;
-    font-size:25px;}
+/* Kontejner za prijavu */
+.membership-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    
+/* Naslov */
+.membership-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Grupa unosa */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Polja za unos */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Dugme za prijavu */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #e03e00;
+}
+
+/* Responzivni dizajn */
+@media (max-width: 768px) {
+    .membership-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .input-field {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        font-size: 16px;
+    }
+}
+
+
