@@ -56,4 +56,12 @@ function showServiceDetails(service) {
         `;
         video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/ImI63BUUPwU?si=006DUWNYh5F-KQOt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; 
     }
+
+    serviceDetails.style.display = 'block';
+}
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }

@@ -130,8 +130,12 @@ body {
     padding: 0;
     background: url('img/pozadina.jpg') no-repeat center center fixed;
     background-size: cover;
+<<<<<<< HEAD
     color: #ffffff; 
 }
+=======
+    color: #ffffff; }
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
 
 header {
     background-color: #333;
@@ -148,8 +152,12 @@ nav ul li a {
 section {
     padding: 2em;
     text-align: center;
+<<<<<<< HEAD
     color: #ffffff; 
 }
+=======
+    color: #ffffff; }
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
 
 #shop {
     margin-top: 2em;
@@ -175,14 +183,26 @@ button {
 
 button:hover {
     background-color: #555;
+<<<<<<< HEAD
     color: #ffffff; 
+=======
+    color: #ffffff;
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
 }
 #about {
     background-color: rgba(0, 0, 0, 0.6); 
     color: #ffffff; 
     padding: 2em;
+<<<<<<< HEAD
     border-radius: 10px; 
     margin: 2em auto;
+=======
+    border-radius: 10px; /
+    .box {
+        margin: 2em auto;
+    }
+    
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
     width: 80%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     border: 2px solid #ffd700; 
@@ -234,23 +254,37 @@ button:hover {
     border-radius: 8px; 
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
     cursor: pointer;
+<<<<<<< HEAD
     transition: all 0.3s ease; 
 }
+=======
+    transition: all 0.3s ease; }
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
 
 #services button:hover {
     background-color: #ff4500; 
     color: #fff; 
     transform: scale(1.05); 
+<<<<<<< HEAD
     box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.4); 
 }
+=======
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.4);}
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
 
 #service-details {
     margin-top: 1em;
     padding: 1.5em;
+<<<<<<< HEAD
     background-color: rgba(255, 255, 255, 0.9); 
     color: #333; 
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+=======
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
     text-align: center;
     font-size: 1.1em; 
 }
@@ -258,6 +292,10 @@ button:hover {
     margin-top: 2em;
     padding: 1.5em;
     background-color:  rgba(255, 255, 255, 0.1); 
+<<<<<<< HEAD
+=======
+    color: #333; 
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
     border-radius: 10px;
     text-align: center;
     width: 80%;
@@ -267,14 +305,22 @@ button:hover {
 }
 
 .product {
+<<<<<<< HEAD
     border: 1px solid #555;
+=======
+    border: 1px solid #555; 
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
     padding: 1em;
     margin: 1em auto;
     max-width: 300px;
     background-color: rgba(255, 255, 255, 0.5); 
     border-radius: 8px; 
+<<<<<<< HEAD
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
+=======
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
 
 .product-image {
     width: 100%;
@@ -302,20 +348,34 @@ button:hover {
     margin-top: 20px;
     padding: 0.6em 1.2em;
     background-color: #ff4500; 
+<<<<<<< HEAD
     color: #fff; 
+=======
+    color: #fff;
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+<<<<<<< HEAD
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); 
     transition: all 0.3s ease; 
+=======
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);*/
+    selector {
+        transition: all 0.3s ease;
 }
-
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
+}
 .back-to-top:hover {
     background-color: #ffd700; 
     color: #333; 
     transform: scale(1.1); 
+<<<<<<< HEAD
     box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.3);
+=======
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.3); 
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
 }
 
 header {
@@ -345,6 +405,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+<<<<<<< HEAD
     color: #ff4500;
 }
 
@@ -354,10 +415,92 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.6);
     color: #ffffff; 
     border-radius: 10px;
+=======
+    color: #ff4500; 
+}
+
+#gym-membership {
+    margin-top: 5em;
+    padding: 1.5em;
+    background-color: rgba(39, 36, 36, 0.3);
+    color: white;
+    border-radius: 12px;
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
     text-align: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+<<<<<<< HEAD
     border: 2px solid #ffd700; 
+=======
+    margin-bottom: 5em;
+>>>>>>> 8f10249d6c0c845fa2d7fbc4b101bc0a55b8fa7f
 }
+
+/* Kontejner za prijavu */
+.membership-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Naslov */
+.membership-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Grupa unosa */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Polja za unos */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Dugme za prijavu */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #e03e00;
+}
+
+/* Responzivni dizajn */
+@media (max-width: 768px) {
+    .membership-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .input-field {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        font-size: 16px;
+    }
+}
+
+
