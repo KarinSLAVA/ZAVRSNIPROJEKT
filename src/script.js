@@ -1,21 +1,21 @@
-// Scroll na vrh
+
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Alert za prijavu članstva
+
 document.getElementById("membership-form").addEventListener("submit", function (e) {
     e.preventDefault();
     alert("Hvala što ste se prijavili! Uskoro ćemo vas kontaktirati.");
 });
 
-// Alert za kontakt formu
+
 document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
     alert("Poruka poslana! Hvala na javljanju.");
 });
 
-// Dodavanje u košaricu
+
 let cart = [];
 let totalPrice = 0;
 
@@ -32,7 +32,7 @@ function addToCart(product, price) {
     alert(`${product} je dodan u košaricu!`);
 }
 
-// Detalji usluga + VIDEO dodan za "Grupni treninzi"
+
 function showServiceDetails(service) {
     const content = document.getElementById('service-content');
     const video = document.getElementById('video-container');
@@ -49,11 +49,11 @@ function showServiceDetails(service) {
         content.innerHTML = `
             <p><strong>Osobni treninzi</strong> pružaju individualizirani pristup vašem fitness cilju uz stručnu pomoć naših trenera.</p>
         `;
-        video.innerHTML = ''; // Nema videa
-    } else if (service === 'powerlifting') {
+        video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/3N-E2EvXVQM?si=1DMq1RDikmdtuNax" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; 
+    } else if (service === 'cardio') {
         content.innerHTML = `
-            <p><strong>Opremanje za powerlifting</strong> nudi svu potrebnu opremu i programe za napredne vježbače usmjerene na snagu.</p>
+            <p><strong>Cardio trening</strong> je oblik tjelesne aktivnosti koji povećava rad srca i pluća, poboljšava izdržljivost, ubrzava metabolizam te učinkovito pomaže u sagorijevanju kalorija, zbog čega je važan dio zdravog i aktivnog načina života.</p>
         `;
-        video.innerHTML = ''; // Nema videa
+        video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/ImI63BUUPwU?si=006DUWNYh5F-KQOt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; 
     }
 }
