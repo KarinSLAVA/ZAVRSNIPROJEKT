@@ -56,7 +56,6 @@ function showServiceDetails(service) {
         `;
         video.innerHTML = ''; // Nema videa
     }
-<<<<<<< HEAD
 
     serviceDetails.style.display = 'block';
 }
@@ -65,6 +64,4 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth'
     });
-=======
->>>>>>> d6a830c70299e29b259ad1375667178b4b42287b
 }
