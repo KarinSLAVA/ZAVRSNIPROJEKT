@@ -350,15 +350,19 @@ nav ul li a:hover {
 #gym-membership {
     margin-top: 5em;
     padding: 1.5em;
-    background-color: rgba(39, 36, 36, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    border-radius: 12px;
+    border-radius: 10px;
     text-align: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #ffd700; 
+    text-align: center;
+
 }
 
 /* Kontejner za prijavu */
@@ -368,7 +372,7 @@ nav ul li a:hover {
     padding: 20px;
     background: #f8f9fa;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Naslov */
@@ -376,7 +380,7 @@ nav ul li a:hover {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #fcfcfc;
 }
 
 /* Grupa unosa */
@@ -396,8 +400,8 @@ nav ul li a:hover {
 /* Dugme za prijavu */
 .submit-button {
     width: 100%;
-    padding: 12px;
-    font-size: 18px;
+    padding: 20px;
+    font-size: 20px;
     background: #ff4500;
     color: white;
     border: none;
@@ -410,20 +414,5 @@ nav ul li a:hover {
     background: #e03e00;
 }
 
-/* Responzivni dizajn */
-@media (max-width: 768px) {
-    .membership-container {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .input-field {
-        font-size: 14px;
-    }
-
-    .submit-button {
-        font-size: 16px;
-    }
-}
 
 
