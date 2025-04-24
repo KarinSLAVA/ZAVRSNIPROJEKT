@@ -1,21 +1,7 @@
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-
-document.getElementById("membership-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Hvala što ste se prijavili! Uskoro ćemo vas kontaktirati.");
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Hvala na vašem kontaktu! Uskoro ćemo vam se javiti.');
 });
-
-
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Poruka poslana! Hvala na javljanju.");
-});
-
-
 let cart = [];
 let totalPrice = 0;
 
@@ -25,36 +11,80 @@ function addToCart(product, price) {
 
     const cartItems = document.getElementById('cart-items');
     const listItem = document.createElement('li');
-    listItem.textContent = `${product} - €${price}`;
+    listItem.textContent = product + " - €" + price;
     cartItems.appendChild(listItem);
 
     document.getElementById('total-price').textContent = totalPrice.toFixed(2);
-    alert(`${product} je dodan u košaricu!`);
+    alert(product + " je dodan u košaricu!");
 }
-
-
+function showDetails(option) {
+    const detailsContent = document.getElementById('details-content');
+    const detailsSection = document.getElementById('details');
+    
+    if (option === 'group') {
+        detailsContent.textContent = 'Grupni trening uključuje vježbe prilagođene svima, uz motivaciju stručnih trenera i energiju grupe.';
+    } else if (option === 'personal') {
+        detailsContent.textContent = 'Osobni trening je prilagođen vašim specifičnim ciljevima i potrebama, uz stalnu podršku trenera.';
+    } else if (option === 'weeklyPlan') {
+        detailsContent.innerHTML = `
+            <strong>Plan treninga za radni tjedan:</strong>
+            <ul>
+                <li>Ponedjeljak: Kardio i noge</li>
+                <li>Utorak: Leđa i biceps</li>
+                <li>Srijeda: Odmor</li>
+                <li>Četvrtak: Prsa i triceps</li>
+                <li>Petak: Ramena i core</li>
+                <li>Subota: Full body trening</li>
+                <li>Nedjelja: Aktivno opuštanje</li>
+            </ul>
+        `;
+    } else if (option === 'nutrition') {
+        detailsContent.innerHTML = `
+            <strong>Preporučeni popis hrane:</strong>
+            <ul>
+                <li>Piletina, riba, jaja</li>
+                <li>Riža, krumpir, zobene pahuljice</li>
+                <li>Svježe povrće i voće</li>
+                <li>Proteinski dodaci</li>
+                <li>Oraščasti plodovi i maslinovo ulje</li>
+            </ul>
+        `;
+    }
+    
+    detailsSection.style.display = 'block';
+}
 function showServiceDetails(service) {
-    const content = document.getElementById('service-content');
-    const video = document.getElementById('video-container');
-    document.getElementById('service-details').style.display = 'block';
+    const serviceContent = document.getElementById('service-content');
+    const serviceDetails = document.getElementById('service-details');
 
     if (service === 'groupTraining') {
-        content.innerHTML = `
-            <p><strong>Grupni treninzi</strong> su idealni za sve koji vole vježbati u društvu. Treninzi uključuju kardio, HIIT i kružne vježbe uz vodstvo instruktora.</p>
-        `;
-        video.innerHTML = `
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/3gliq0FnO94?si=sx8y6ZwilwhRE4Pn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        serviceContent.innerHTML = `
+            <strong>Grupni treninzi:</strong>
+            <ul>
+                <li>Dinamični treninzi za sve razine fitnessa.</li>
+                <li>Tim treneri za podršku i motivaciju.</li>
+                <li>Rad na izdržljivosti, snazi i fleksibilnosti.</li>
+            </ul>
+            <p><strong>Plan prehrane:</strong> Povećajte unos proteina i kompleksnih ugljikohidrata.</p>
         `;
     } else if (service === 'personalTraining') {
-        content.innerHTML = `
-            <p><strong>Osobni treninzi</strong> pružaju individualizirani pristup vašem fitness cilju uz stručnu pomoć naših trenera.</p>
+        serviceContent.innerHTML = `
+            <strong>Osobni treninzi:</strong>
+            <ul>
+                <li>Individualizirani pristup temeljen na vašim ciljevima.</li>
+                <li>Detaljna analiza tehnike izvođenja vježbi.</li>
+            </ul>
+            <p><strong>Plan prehrane:</strong> Balansirana prehrana s naglaskom na makronutrijente.</p>
         `;
-        video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/3N-E2EvXVQM?si=1DMq1RDikmdtuNax" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; 
-    } else if (service === 'cardio') {
-        content.innerHTML = `
-            <p><strong>Cardio trening</strong> je oblik tjelesne aktivnosti koji povećava rad srca i pluća, poboljšava izdržljivost, ubrzava metabolizam te učinkovito pomaže u sagorijevanju kalorija, zbog čega je važan dio zdravog i aktivnog načina života.</p>
+    } else if (service === 'powerlifting') {
+        serviceContent.innerHTML = `
+            <strong>Opremanje za powerlifting:</strong>
+            <ul>
+                <li>Programi za povećanje snage u čučnju, bench pressu i deadliftu.</li>
+                <li>Specijalizirana oprema za trening i natjecanja.</li>
+            </ul>
+            <p><strong>Plan prehrane:</strong> Fokus na visokoproteinske obroke i kalorijski suficit.</p>
         `;
-        video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/ImI63BUUPwU?si=006DUWNYh5F-KQOt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; 
     }
 
     serviceDetails.style.display = 'block';
@@ -62,6 +92,73 @@ function showServiceDetails(service) {
 function scrollToTop() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth' // Glatki efekt pomicanja
     });
 }
+
+document.querySelector('#membership-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Sprječava ponovno učitavanje stranice
+
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+
+    alert(`Čestitamo, ${firstName} ${lastName}! Postali ste član teretane.`);
+});
+
+
+    const servicePlans = {
+        groupTraining: `
+            <h4>Plan prehrane:</h4>
+            <p>Ponedjeljak - Visokoproteinski obroci</p>
+            <p>Utorak - Niskomasni obrok s povrćem</p>
+            <!-- Dodajte još dana -->
+
+            <h4>Plan treninga:</h4>
+            <p>Ponedjeljak - Full body workout (40 minuta)</p>
+            <p>Utorak - Cardio (30 minuta)</p>
+            <!-- Dodajte još dana -->
+
+            <h4>Video:</h4>
+            <video width="100%" controls>
+                <source src="https://youtube.com/shorts/soWGRuj7nsA?si=nreDNQGHPIAtlRCG" type="video/mp4">
+                Vaš preglednik ne podržava video oznaku.
+            </video>
+        `,
+        personalTraining: `
+            <h4>Plan prehrane:</h4>
+            <p>Individualni plan prema vašim potrebama</p>
+            <!-- Dodajte više detalja -->
+
+            <h4>Plan treninga:</h4>
+            <p>Osobni plan sa svakodnevnim vježbama</p>
+
+            <h4>Video:</h4>
+            <video width="100%" controls>
+                <source src="https://youtu.be/3gliq0FnO94?si=ELBd3ZKi1G-rUw9a" type="video/mp4">
+                Vaš preglednik ne podržava video oznaku.
+            </video>
+        `,
+        cardio: `
+            <h4>Plan prehrane:</h4>
+            <p>Obroci bogati energijom za izdržljivost</p>
+
+            <h4>Plan treninga:</h4>
+            <p>Svaki dan - 45 minuta kardio vježbi</p>
+
+            <h4>Video:</h4>
+            <video width="100%" controls>
+                <source src="https://youtube.com/shorts/cffLd6qkXOk?si=Wpep-jihDlOT57No" type="video/mp4">
+                Vaš preglednik ne podržava video oznaku.
+            </video>
+        `
+    };
+
+    function showServiceDetails(service) {
+        document.getElementById('service-details').style.display = 'block';
+        document.getElementById('service-content').innerHTML = servicePlans[service] || '<p>Trenutno nema dostupnih informacija.</p>';
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
