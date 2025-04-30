@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "tailwindcss";
+/*@import tailwindcss;*/
 @plugin "daisyui";
 
 body {
@@ -43,17 +43,7 @@ form {
     text-align: left;
 }
 
-#shop {
-    margin-top: 2em;
-    padding: 1em;
-    background-color:  rgba(255, 255, 255, 0.1);
-    text-align: center;
 
-}
-.elementi{
-    display:grid;
-    grid-template-columns: repeat(3,auto);
-}
 
 .product {
     border: 1px solid #333;
@@ -90,7 +80,7 @@ body {
 
 .product-image {
     width: 100%;
-    max-width: 400px;
+    /*max-width: 400px;*/
     height: auto;
     display: block;
     margin: 0 auto 10px;
@@ -100,16 +90,7 @@ body {
     font-size:50px;
 }
 
-#shop {
-    margin-top: 2em;
-    padding: 1em;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 button {
     margin-top: 1em;
@@ -161,6 +142,7 @@ section {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    display:grid;
 }
 
 button {
@@ -253,17 +235,6 @@ button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     text-align: center;
     font-size: 1.1em; 
-}
-#shop {
-    margin-top: 2em;
-    padding: 1.5em;
-    background-color:  rgba(255, 255, 255, 0.1); 
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .product {
@@ -384,7 +355,7 @@ nav ul li a:hover {
 
 }
 
-/* Kontejner za prijavu */
+
 .membership-container {
     max-width: 600px;
     margin: 0 auto;
@@ -394,7 +365,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Naslov */
+
 .membership-title {
     text-align: center;
     font-size: 24px;
@@ -402,12 +373,12 @@ nav ul li a:hover {
     color: #fcfcfc;
 }
 
-/* Grupa unosa */
+
 .input-group {
     margin-bottom: 15px;
 }
 
-/* Polja za unos */
+
 .input-field {
     width: 100%;
     padding: 10px;
@@ -416,7 +387,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Dugme za prijavu */
+
 .submit-button {
     width: 100%;
     padding: 20px;
@@ -433,7 +404,7 @@ nav ul li a:hover {
     background: #e03e00;
 }
 
-/* Galerija sekcija */
+
 #gallery {
     margin-top: 30px;
 }

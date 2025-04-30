@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" taype="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <header>
@@ -62,7 +63,7 @@
     
     <section id="shop">
         <h2>Shop</h2>
-        <div class="elementi grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
         <div class="product">
             <img src="img/protein.jpg" alt="Proteini" class="product-image">
             <h3>Protein</h3>
@@ -167,6 +168,7 @@
             <button onclick="addToCart('crni top', 14)">Dodaj u košaricu</button>
         </div>
     </div>
+    </section>
     <div id="cart" style="color: white;">
         <h3>Vaša košarica:</h3>
         <ul id="cart-items"></ul>
