@@ -92,8 +92,7 @@ function showServiceDetails(service) {
 function scrollToTop() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Glatki efekt pomicanja
-    });
+        behavior: 'smooth' 
 }
 
 document.querySelector('#membership-form').addEventListener('submit', function(event) {
