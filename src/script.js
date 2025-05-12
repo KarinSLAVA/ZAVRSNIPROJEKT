@@ -110,23 +110,23 @@ document.querySelector('#membership-form').addEventListener('submit', function(e
             <h4>Plan prehrane:</h4>
             <p>Ponedjeljak - Visokoproteinski obroci</p>
             <p>Utorak - Niskomasni obrok s povrćem</p>
-            <!-- Dodajte još dana -->
+            
 
             <h4>Plan treninga:</h4>
             <p>Ponedjeljak - Full body workout (40 minuta)</p>
             <p>Utorak - Cardio (30 minuta)</p>
-            <!-- Dodajte još dana -->
+           
 
             <h4>Video:</h4>
             <video width="100%" controls>
-                <source src="https://youtube.com/shorts/soWGRuj7nsA?si=nreDNQGHPIAtlRCG" type="video/mp4">
-                Vaš preglednik ne podržava video oznaku.
+                <source src="https://youtube.com/shorts/fbSM7oCY--g?si=-yx3a615U80ndM00" type="video/mp4">
+              
             </video>
         `,
         personalTraining: `
             <h4>Plan prehrane:</h4>
             <p>Individualni plan prema vašim potrebama</p>
-            <!-- Dodajte više detalja -->
+          
 
             <h4>Plan treninga:</h4>
             <p>Osobni plan sa svakodnevnim vježbama</p>
@@ -134,7 +134,7 @@ document.querySelector('#membership-form').addEventListener('submit', function(e
             <h4>Video:</h4>
             <video width="100%" controls>
                 <source src="https://youtu.be/3gliq0FnO94?si=ELBd3ZKi1G-rUw9a" type="video/mp4">
-                Vaš preglednik ne podržava video oznaku.
+              
             </video>
         `,
         cardio: `
