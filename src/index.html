@@ -49,7 +49,35 @@
     
             <button type="submit" class="submit-button">Prijavi se</button>
         </form>
+    
+        <!-- Mjesto za obavijest -->
+        <div id="success-message" class="success-message" style="display: none;">
+            <p>Čestitamo! Postali ste član teretane. Dobrodošli!</p>
+            <button id="cancel-membership" class="cancel-button">Otkazi članstvo</button>
+        </div>
     </section>
+    <script>
+        // Funkcija koja se pokreće kad se prijava šalje
+        document.getElementById("membership-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Sprečava da forma bude poslana na server
+    
+            // Ispunjavanje forme je uspješno, pa prikazujemo obavijest
+            const successMessage = document.getElementById("success-message");
+            successMessage.style.display = "block"; // Prikazuje obavijest
+        });
+    
+        // Funkcija za otkazivanje članstva
+        document.getElementById("cancel-membership").addEventListener("click", function() {
+            // Resetiraj formu
+            document.getElementById("membership-form").reset();
+    
+            // Sakrij obavijest
+            const successMessage = document.getElementById("success-message");
+            successMessage.style.display = "none"; // Sakrij obavijest
+        });
+    </script>
+        
+        
     
     <section id="about">
         <h2>O nama</h2>
@@ -62,119 +90,161 @@
     </section>
     
     <section id="shop">
-        <h2>Shop</h2>
+        <h2 class="shop-title">Shop</h2>
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-        <div class="product">
-            <img src="img/protein.jpg" alt="Proteini" class="product-image">
-            <h3>Protein</h3>
-            <p>Cijena: €20</p>
-            <button onclick="addToCart('Proteini', 20)">Dodaj u košaricu</button>
+            <div class="product">
+                <img src="img/protein.jpg" alt="Proteini" class="product-image">
+                <h3>Protein</h3>
+                <p>Cijena: €20</p>
+                <button onclick="addToCart('Proteini', 20)">Dodaj u košaricu</button>
+            </div>
+            <div class="product">
+                <img src="img/equipment.jpg" alt="Fitness oprema" class="product-image">
+                <h3>Proteini</h3>
+                <p>Cijena: €50</p>
+                <button onclick="addToCart('Fitness oprema', 50)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/komplet.webp" alt="komplet" class="product-image">
+                <h3>Tajice i top-komplet</h3>
+                <p>Cijena: €50</p>
+                <button onclick="addToCart('komplet', 50)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/coko3.webp" alt="proteinska-čokoladica" class="product-image">
+                <h3>Proteinska čokoladica</h3>
+                <p>Cijena: €5</p>
+                <button onclick="addToCart('proteinska-čokoladica', 5)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/cokoladica1.webp" alt="proteinska-čokolada" class="product-image">
+                <h3>Proteinska čokolada</h3>
+                <p>Cijena: €7</p>
+                <button onclick="addToCart('proteinska-čokolada', 7)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/gace1.webp" alt="kratke hlače" class="product-image">
+                <h3>Kratke hlače-crne</h3>
+                <p>Cijena: €25</p>
+                <button onclick="addToCart('Kratke hlače', 25)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/gace2.webp" alt="kratke hlače" class="product-image">
+                <h3>Kratke hlače-sive</h3>
+                <p>Cijena: €25</p>
+                <button onclick="addToCart('Kratke hlače', 25)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/muska3.webp" alt="majica" class="product-image">
+                <h3>Bijela majica dugih rukava</h3>
+                <p>Cijena: €20</p>
+                <button onclick="addToCart('Majica dugih rukava', 20)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/muske1.webp" alt="kratke hlaće" class="product-image">
+                <h3>Kratke hlače-muške</h3>
+                <p>Cijena: €25</p>
+                <button onclick="addToCart('Kratke hlače', 25)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/muske2.webp" alt="kratke hlače" class="product-image">
+                <h3>Kratke hlače-muške</h3>
+                <p>Cijena: €25</p>
+                <button onclick="addToCart('Kratke hlače', 25)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/shaker1.jpg" alt="shaker" class="product-image">
+                <h3>Shaker-zeleni</h3>
+                <p>Cijena: €15</p>
+                <button onclick="addToCart('Shaker-zeleni', 15)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/shaker2.jpg" alt="shaker" class="product-image">
+                <h3>Shaker-rozi</Shaker-rozi></h3>
+                <p>Cijena: €15</p>
+                <button onclick="addToCart('Shaker-rozi', 15)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/tajice1.jpg" alt="tajice" class="product-image">
+                <h3>Tajice-zelene</h3>
+                <p>Cijena: €17</p>
+                <button onclick="addToCart('Tajice-zelene', 17)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/tajice2.jpg" alt="tajice" class="product-image">
+                <h3>Tajice-smeđe</h3>
+                <p>Cijena: €20</p>
+                <button onclick="addToCart('Tajice-smeđe', 20)">Dodaj u košaricu</button>
+            </div>
+    
+            <div class="product">
+                <img src="img/top1.webp" alt="top" class="product-image">
+                <h3>Crni top</h3>
+                <p>Cijena: €14</p>
+                <button onclick="addToCart('crni top', 14)">Dodaj u košaricu</button>
+            </div>
         </div>
-        <div class="product">
-            <img src="img/equipment.jpg" alt="Fitness oprema" class="product-image">
-            <h3>Proteini</h3>
-            <p>Cijena: €50</p>
-            <button onclick="addToCart('Fitness oprema', 50)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/komplet.webp" alt="komplet" class="product-image">
-            <h3>Tajice i top-komplet</h3>
-            <p>Cijena: €50</p>
-            <button onclick="addToCart('komplet', 50)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/coko3.webp" alt="proteinska-čokoladica" class="product-image">
-            <h3>Proteinska čokoladica</h3>
-            <p>Cijena: €5</p>
-            <button onclick="addToCart('proteinska-čokoladica', 5)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/cokoladica1.webp" alt="proteinska-čokolada" class="product-image">
-            <h3>Proteinska čokolada</h3>
-            <p>Cijena: €7</p>
-            <button onclick="addToCart('proteinska-čokolada', 7)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/gace1.webp" alt="kratke hlače" class="product-image">
-            <h3>Kratke hlače-crne</h3>
-            <p>Cijena: €25</p>
-            <button onclick="addToCart('Kratke hlače', 25)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/gace2.webp" alt="kratke hlače" class="product-image">
-            <h3>Kratke hlače-sive</h3>
-            <p>Cijena: €25</p>
-            <button onclick="addToCart('Kratke hlače', 25)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/muska3.webp" alt="majica" class="product-image">
-            <h3>Bijela majica dugih rukava</h3>
-            <p>Cijena: €20</p>
-            <button onclick="addToCart('Majica dugih rukava', 20)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/muske1.webp" alt="kratke hlaće" class="product-image">
-            <h3>Kratke hlače-muške</h3>
-            <p>Cijena: €25</p>
-            <button onclick="addToCart('Kratke hlače', 25)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/muske2.webp" alt="kratke hlače" class="product-image">
-            <h3>Kratke hlače-muške</h3>
-            <p>Cijena: €25</p>
-            <button onclick="addToCart('Kratke hlače', 25)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/shaker1.jpg" alt="shaker" class="product-image">
-            <h3>Shaker-zeleni</h3>
-            <p>Cijena: €15</p>
-            <button onclick="addToCart('Shaker-zeleni', 15)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/shaker2.jpg" alt="shaker" class="product-image">
-            <h3>Shaker-rozi</Shaker-rozi></h3>
-            <p>Cijena: €15</p>
-            <button onclick="addToCart('Shaker-rozi', 15)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/tajice1.jpg" alt="tajice" class="product-image">
-            <h3>Tajice-zelene</h3>
-            <p>Cijena: €17</p>
-            <button onclick="addToCart('Tajice-zelene', 17)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/tajice2.jpg" alt="tajice" class="product-image">
-            <h3>Tajice-smeđe</h3>
-            <p>Cijena: €20</p>
-            <button onclick="addToCart('Tajice-smeđe', 20)">Dodaj u košaricu</button>
-        </div>
-
-        <div class="product">
-            <img src="img/top1.webp" alt="top" class="product-image">
-            <h3>Crni top</h3>
-            <p>Cijena: €14</p>
-            <button onclick="addToCart('crni top', 14)">Dodaj u košaricu</button>
-        </div>
+    </section>
+    
+       
     </div>
     </section>
-    <div id="cart" style="color: white;">
+
+    <div id="cart" class="cart-card">
         <h3>Vaša košarica:</h3>
         <ul id="cart-items"></ul>
-        <p>Ukupno: €<span id="total-price">0</span></p>
-        <button class="back-to-top" onclick="scrollToTop()">Vrati se na početak</button>
-    </div>
+        <p>Ukupno: €<span id="total-price">0.00</span></p>
+        <button onclick="scrollToTop()">Vrati se na početak</button>
+        <button onclick="clearCart()">Obriši košaricu</button>
+      </div>
+      <script>
+        let cart = [];
+      
+        function addToCart(name, price) {
+          cart.push({ name, price });
+          updateCartDisplay();
+        }
+      
+        function updateCartDisplay() {
+          const cartItems = document.getElementById("cart-items");
+          const totalPriceElement = document.getElementById("total-price");
+          cartItems.innerHTML = "";
+      
+          let total = 0;
+          cart.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.name} - €${item.price}`;
+            cartItems.appendChild(li);
+            total += item.price;
+          });
+      
+          totalPriceElement.textContent = total.toFixed(2);
+        }
+      
+        function clearCart() {
+          cart = [];
+          updateCartDisplay();
+        }
+      
+        function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      
+        updateCartDisplay();
+      </script>
+            
     
 
     </section>
@@ -198,6 +268,44 @@
                 onclick="scrollToTop()">Vrati se na početak</button>
         </div>
     </section>
+    <script>
+        function showServiceDetails(service) {
+            const serviceContent = document.getElementById("service-content");
+            const serviceDetails = document.getElementById("service-details");
+    
+            if (service === "groupTraining") {
+                serviceContent.innerHTML = `
+                    <h4>Grupni treninzi</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3gliq0FnO94?si=nOUqHPC4GbznbrUP" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                `;
+            } else if (service === "personalTraining") {
+                serviceContent.innerHTML = `
+                    <h4>Osobni treninzi</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3N-E2EvXVQM?si=vPyiX64mnYGOv9DP" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                `;
+            } else if (service === "cardio") {
+                serviceContent.innerHTML = `
+                    <h4>Cardio treninzi</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-_PX8C4fPc0?si=cm_XuWXtv1Pq9SXA" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                `;
+            }
+    
+            // Prikazati detalje usluge
+            serviceDetails.style.display = "block";
+        }
+    
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+        
+    
 
 
     <section id="gallery" style="background-color: black; color: gold; padding: 30px; text-align: center; border: 5px solid gold; border-radius: 10px;">
