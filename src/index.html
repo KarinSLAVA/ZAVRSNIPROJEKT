@@ -19,6 +19,54 @@
             </ul>
         </nav>
     </header>
+
+
+
+<form class="max-w-sm mx-auto text-center">
+  <div class="mb-5">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+    <input type="email" id="email" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" placeholder="name@flowbite.com" required />
+  </div>
+  <div class="mb-5">
+    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+    <input type="password" id="password" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" required />
+  </div>
+  
+  <div class="flex items-start mb-5">
+    <div class="flex items-center h-5">
+      <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+    </div>
+    <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+  </div>
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register new account</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section id="gym-membership" class="membership-container">
         <h2 class="membership-title">Postanite član teretane</h2>
         <form id="membership-form" class="membership-form">
@@ -50,35 +98,34 @@
             <button type="submit" class="submit-button">Prijavi se</button>
         </form>
     
-        <!-- Mjesto za obavijest -->
+      
         <div id="success-message" class="success-message" style="display: none;">
             <p>Čestitamo! Postali ste član teretane. Dobrodošli!</p>
             <button id="cancel-membership" class="cancel-button">Otkazi članstvo</button>
         </div>
     </section>
+
     <script>
-        // Funkcija koja se pokreće kad se prijava šalje
+       
         document.getElementById("membership-form").addEventListener("submit", function(event) {
-            event.preventDefault();  // Sprečava da forma bude poslana na server
+            event.preventDefault();  
     
-            // Ispunjavanje forme je uspješno, pa prikazujemo obavijest
+           
             const successMessage = document.getElementById("success-message");
-            successMessage.style.display = "block"; // Prikazuje obavijest
+            successMessage.style.display = "block"; 
         });
     
-        // Funkcija za otkazivanje članstva
+        
         document.getElementById("cancel-membership").addEventListener("click", function() {
-            // Resetiraj formu
+           
             document.getElementById("membership-form").reset();
     
-            // Sakrij obavijest
+            
             const successMessage = document.getElementById("success-message");
-            successMessage.style.display = "none"; // Sakrij obavijest
+            successMessage.style.display = "none"; 
         });
     </script>
-        
-        
-    
+          
     <section id="about">
         <h2>O nama</h2>
         <p>Dobrodošli u vaš drugi dom zdravlja, snage i motivacije. Naša teretana nije samo prostor za vježbanje—ona je zajednica. Ovdje stvaramo priče o uspjehu, savladavanju prepreka i ostvarivanju snova. Naš cilj je da svaki član osjeti podršku, energiju i motivaciju za svakodnevno postizanje svojih ciljeva. 
@@ -196,13 +243,10 @@
                 <button onclick="addToCart('crni top', 14)">Dodaj u košaricu</button>
             </div>
         </div>
-    </section>
-    
-       
+    </section>    
     </div>
     </section>
-
-    <div id="cart" class="cart-card">
+<div id="cart" class="cart-card">
         <h3>Vaša košarica:</h3>
         <ul id="cart-items"></ul>
         <p>Ukupno: €<span id="total-price">0.00</span></p>
@@ -244,9 +288,7 @@
       
         updateCartDisplay();
       </script>
-            
-    
-
+        
     </section>
     
     <section id="services" style="background-color: black; color: gold; padding: 30px; border: 5px solid gold; border-radius: 10px;">
@@ -296,7 +338,7 @@
                 `;
             }
     
-            // Prikazati detalje usluge
+            
             serviceDetails.style.display = "block";
         }
     
@@ -305,9 +347,6 @@
         }
     </script>
         
-    
-
-
     <section id="gallery" style="background-color: black; color: gold; padding: 30px; text-align: center; border: 5px solid gold; border-radius: 10px;">
         <h2>Galerija</h2>
         <p>Pogledajte slike iz naše teretane:</p>
