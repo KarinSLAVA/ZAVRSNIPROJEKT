@@ -18,14 +18,12 @@ function addToCart(product, price) {
     alert(product + " je dodan u košaricu!");
 }
 
-
 function scrollToTop() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth' 
     });
 }
-
 document.querySelector('#membership-form').addEventListener('submit', function(event) {
     event.preventDefault(); 
     const firstName = document.getElementById('firstName').value;
@@ -37,16 +35,6 @@ document.querySelector('#membership-form').addEventListener('submit', function(e
 
     const servicePlans = {
         groupTraining: `
-            <h4>Plan prehrane:</h4>
-            <p>Ponedjeljak - Visokoproteinski obroci</p>
-            <p>Utorak - Niskomasni obrok s povrćem</p>
-            
-
-            <h4>Plan treninga:</h4>
-            <p>Ponedjeljak - Full body workout (40 minuta)</p>
-            <p>Utorak - Cardio (30 minuta)</p>
-           
-
             <h4>Video:</h4>
             <video width="100%" controls>
                 <source src="https://youtube.com/shorts/fbSM7oCY--g?si=-yx3a615U80ndM00" type="video/mp4">
@@ -54,13 +42,6 @@ document.querySelector('#membership-form').addEventListener('submit', function(e
             </video>
         `,
         personalTraining: `
-            <h4>Plan prehrane:</h4>
-            <p>Individualni plan prema vašim potrebama</p>
-          
-
-            <h4>Plan treninga:</h4>
-            <p>Osobni plan sa svakodnevnim vježbama</p>
-
             <h4>Video:</h4>
             <video width="100%" controls>
                 <source src="https://youtu.be/3gliq0FnO94?si=ELBd3ZKi1G-rUw9a" type="video/mp4">
@@ -68,12 +49,6 @@ document.querySelector('#membership-form').addEventListener('submit', function(e
             </video>
         `,
         cardio: `
-            <h4>Plan prehrane:</h4>
-            <p>Obroci bogati energijom za izdržljivost</p>
-
-            <h4>Plan treninga:</h4>
-            <p>Svaki dan - 45 minuta kardio vježbi</p>
-
             <h4>Video:</h4>
             <video width="100%" controls>
                 <source src="https://youtube.com/shorts/cffLd6qkXOk?si=Wpep-jihDlOT57No" type="video/mp4">
