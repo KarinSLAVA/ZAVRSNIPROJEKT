@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gym App</title>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+  <style>
+    body { font-family: Arial; background:#111; color:white; text-align:center; }
+    input, button { padding:10px; margin:5px; }
+    .card { border:1px solid #444; padding:10px; margin:10px; }
+  </style>
+</head>
+
+<body>
+
+<h1>🏋️ Gym App</h1>
+
+<div id="auth">
+  <input id="email" placeholder="Email"><br>
+  <input id="password" type="password" placeholder="Password"><br>
+  <button onclick="login()">Login</button>
+  <button onclick="register()">Register</button>
+</div>
+
+<div id="app" style="display:none;">
+  <h2 id="userEmail"></h2>
+
+  <button onclick="show('dashboard')">Dashboard</button>
+  <button onclick="show('membership')">Membership</button>
+  <button onclick="show('shop')">Shop</button>
+  <button onclick="show('meal')">Meal Plan</button>
+  <button onclick="logout()">Logout</button>
+
+  <div id="dashboard">
+    <h3>Welcome 💪</h3>
+  </div>
+
+  <div id="membership" style="display:none;">
+    <h3>Buy Membership</h3>
+    <button onclick="buy()">Activate (30€)</button>
+  </div>
+
+  <div id="shop" style="display:none;">
+    <h3>Shop</h3>
+    <div id="products"></div>
+  </div>
+
+  <div id="meal" style="display:none;">
+    <h3>Meal Plan</h3>
+    <pre id="mealData"></pre>
+  </div>
+
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+  import { getFirestore, doc, setDoc, getDoc, collection, getDocs, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "YOUR_KEY",
+    authDomain: "YOUR_DOMAIN",
+    projectId: "YOUR_ID"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth();
+  const db = getFirestore();
+
+  window.login = async () => {
+    await signInWithEmailAndPassword(auth,
+      email.value,
+      password.value
+    );
+  };
+
+  window.register = async () => {
+    const res = await createUserWithEmailAndPassword(auth,
+      email.value,
+      password.value
+    );
+
+    await setDoc(doc(db, "users", res.user.uid), {
+      email: email.value,
+      membership: false
+    });
+  };
+
+  window.logout = () => signOut(auth);
+
+  window.buy = async () => {
+    const user = auth.currentUser;
+    await updateDoc(doc(db, "users", user.uid), {
+      membership: true
+    });
+    alert("Membership activated!");
+  };
+
+  window.show = (section) => {
+    ["dashboard","membership","shop","meal"].forEach(id => {
+      document.getElementById(id).style.display = "none";
+    });
+    document.getElementById(section).style.display = "block";
+  };
+
+  onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      auth.style.display = "none";
+      app.style.display = "block";
+      userEmail.innerText = user.email;
+
+      loadProducts();
+      loadMeal(user.uid);
+
+    } else {
+      auth.style.display = "block";
+      app.style.display = "none";
+    }
+  });
+
+  async function loadProducts() {
+    const snap = await getDocs(collection(db, "products"));
+    products.innerHTML = "";
+    snap.forEach(doc => {
+      const p = doc.data();
+      products.innerHTML += `<div class="card">${p.name} - ${p.price}€</div>`;
+    });
+  }
+
+  async function loadMeal(uid) {
+    const userDoc = await getDoc(doc(db, "users", uid));
+    if (!userDoc.data().membership) {
+      mealData.innerText = "Members only";
+      return;
+    }
+
+    const mealDoc = await getDoc(doc(db, "mealPlans", uid));
+    mealData.innerText = JSON.stringify(mealDoc.data(), null, 2);
+  }
+</script>
+
+</body>
+</html>
